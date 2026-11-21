@@ -1,15 +1,16 @@
 /* ==========================================================================
    Jennings Cleaning — Premium Homepage Stylesheet
-   Brand-colour driven, mobile-first, vanilla CSS
+   Brand: Charcoal Black + Yellow (exact original header identity)
+   Mobile-first, vanilla CSS, GitHub Pages ready
    ========================================================================== */
 
-/* ---- Design tokens (brand colors — charcoal + amber, original identity) ---- */
+/* ---- Design tokens (brand colors — exact charcoal + yellow) ---- */
 :root {
-  /* Brand colors — charcoal + amber (original Jennings Cleaning header identity) */
-  --color-primary: #111827;      /* charcoal black (primary) */
+  /* Brand colors — charcoal black + yellow (original Jennings Cleaning header) */
+  --color-primary: #111827;      /* charcoal black — primary */
   --color-primary-dark: #030712;
   --color-primary-soft: #F3F4F6;
-  --color-accent: #F59E0B;       /* amber yellow (accent) */
+  --color-accent: #F59E0B;       /* yellow / amber — accent */
   --color-accent-dark: #B45309;
   --color-accent-soft: #FEF3C7;
 
@@ -23,10 +24,10 @@
 
   /* Typography */
   --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-size-base: 1.125rem;    /* 18px */
+  --font-size-base: 1.125rem;
   --line-height-base: 1.7;
 
-  /* Spacing & radius */
+  /* Spacing */
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
@@ -41,7 +42,6 @@
   --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.04);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.06);
 
-  /* Transitions */
   --transition: 0.25s ease;
 }
 
@@ -99,7 +99,6 @@ a {
   padding: 0 var(--space-2);
 }
 
-/* ---- Icons ---- */
 .icon {
   width: 1.25rem;
   height: 1.25rem;
@@ -108,13 +107,13 @@ a {
 }
 
 /* ==========================================================================
-   Header — professional, brand-aligned
+   Header — Professional (logo left, contacts center-right, CTA right)
    ========================================================================== */
 .header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-border);
 }
@@ -124,11 +123,11 @@ a {
   align-items: center;
   justify-content: space-between;
   height: 72px;
-  gap: var(--space-3);
   width: 100%;
-  max-width: 1200px;
+  max-width: 1200px;           /* keeps content from spreading too wide on desktop */
   margin: 0 auto;
-  padding: 0 var(--space-2);
+  padding: 0 var(--space-3);
+  gap: var(--space-3);
 }
 
 .header__logo {
@@ -155,7 +154,6 @@ a {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--color-dark);
-  letter-spacing: -0.01em;
 }
 
 .header__contact-item {
@@ -165,7 +163,7 @@ a {
 }
 
 .header__contact-item .icon {
-  color: var(--color-accent);
+  color: var(--color-accent);  /* yellow icons */
   width: 1.15rem;
   height: 1.15rem;
 }
@@ -196,7 +194,6 @@ a {
   cursor: pointer;
   border: none;
   transition: all var(--transition);
-  text-align: center;
   font-family: inherit;
   letter-spacing: 0.02em;
 }
@@ -231,7 +228,7 @@ a {
   font-size: 1rem;
 }
 
-/* ---- Navigation ---- */
+/* ---- Navigation (mobile drawer + desktop row) ---- */
 .header__nav {
   position: fixed;
   inset: 0;
@@ -300,19 +297,12 @@ a {
   color: var(--color-primary);
 }
 
-.header__menu-toggle .icon--close {
-  display: none;
-}
-
-.header__menu-toggle.is-open .icon--menu {
-  display: none;
-}
-.header__menu-toggle.is-open .icon--close {
-  display: block;
-}
+.header__menu-toggle .icon--close { display: none; }
+.header__menu-toggle.is-open .icon--menu { display: none; }
+.header__menu-toggle.is-open .icon--close { display: block; }
 
 /* ==========================================================================
-   Hero — centered content, fixed side margins
+   Hero — centered content, fixed left/right margins on desktop
    ========================================================================== */
 .hero {
   position: relative;
@@ -340,9 +330,9 @@ a {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(15, 23, 42, 0.55) 0%,
-    rgba(15, 23, 42, 0.25) 55%,
-    rgba(15, 23, 42, 0.05) 100%
+    rgba(17, 24, 39, 0.60) 0%,
+    rgba(17, 24, 39, 0.30) 55%,
+    rgba(17, 24, 39, 0.05) 100%
   );
   z-index: 1;
 }
@@ -351,15 +341,14 @@ a {
   position: relative;
   z-index: 2;
   padding: var(--space-6) 0;
-  max-width: 100%;
   width: 100%;
 }
 
 .hero__content {
-  max-width: 880px;
-  margin: 0 auto;
+  max-width: 800px;             /* prevents content from spreading too wide on desktop */
+  margin: 0 auto;               /* centers left/right */
   text-align: center;
-  padding: 0 var(--space-2);
+  padding: 0 var(--space-2);    /* safe side margins on mobile */
 }
 
 .hero__badge {
@@ -1003,7 +992,7 @@ a {
 }
 
 /* ==========================================================================
-   Responsive (desktop-up)
+   Responsive — desktop fixes
    ========================================================================== */
 @media (min-width: 640px) {
   .header__container { height: 72px; }
