@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64" aria-label="Jennings Cleaning logo">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0E7C4B"/>
+      <stop offset="100%" stop-color="#0B5A3B"/>
+    </linearGradient>
+  </defs>
+  <!-- Water drop / window icon -->
+  <path d="M22 44 Q22 28 40 20 Q58 28 58 44 Q58 52 44 60 Q30 52 22 44 Z" fill="url(#logoGrad)"/>
+  <path d="M40 20 L40 44 M22 44 L58 44 M44 60 L44 44" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="44" cy="44" r="4" fill="#FFFFFF"/>
+</svg>
