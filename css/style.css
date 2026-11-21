@@ -3,7 +3,7 @@
    Brand-colour driven, mobile-first, vanilla CSS
    ========================================================================== */
 
-/* ---- Design tokens (brand colors extracted from original identity) ---- */
+/* ---- Design tokens (brand colors — charcoal + amber, original identity) ---- */
 :root {
   /* Brand colors — charcoal + amber (original Jennings Cleaning header identity) */
   --color-primary: #111827;      /* charcoal black (primary) */
@@ -107,13 +107,15 @@ a {
   vertical-align: middle;
 }
 
-/* ---- Header ---- */
+/* ==========================================================================
+   Header — professional, brand-aligned
+   ========================================================================== */
 .header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -123,7 +125,10 @@ a {
   justify-content: space-between;
   height: 72px;
   gap: var(--space-3);
-  max-width: 100%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-2);
 }
 
 .header__logo {
@@ -177,7 +182,7 @@ a {
   letter-spacing: 0.02em;
 }
 
-/* Buttons */
+/* ---- Buttons ---- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -226,6 +231,7 @@ a {
   font-size: 1rem;
 }
 
+/* ---- Navigation ---- */
 .header__nav {
   position: fixed;
   inset: 0;
@@ -305,7 +311,9 @@ a {
   display: block;
 }
 
-/* ---- Hero ---- */
+/* ==========================================================================
+   Hero — centered content, fixed side margins
+   ========================================================================== */
 .hero {
   position: relative;
   min-height: 60vh;
@@ -344,12 +352,14 @@ a {
   z-index: 2;
   padding: var(--space-6) 0;
   max-width: 100%;
+  width: 100%;
 }
 
 .hero__content {
   max-width: 880px;
   margin: 0 auto;
   text-align: center;
+  padding: 0 var(--space-2);
 }
 
 .hero__badge {
@@ -391,7 +401,9 @@ a {
   gap: 1rem;
 }
 
-/* ---- Trust bar ---- */
+/* ==========================================================================
+   Trust bar
+   ========================================================================== */
 .trust-bar {
   background: var(--color-primary);
   padding: var(--space-3) 0;
@@ -431,7 +443,9 @@ a {
   color: var(--color-white);
 }
 
-/* ---- Section headers ---- */
+/* ==========================================================================
+   Section headers
+   ========================================================================== */
 .section-header {
   text-align: center;
   max-width: 720px;
@@ -464,7 +478,9 @@ a {
   font-size: 1.05rem;
 }
 
-/* ---- Intro ---- */
+/* ==========================================================================
+   Intro
+   ========================================================================== */
 .intro {
   padding: var(--space-6) 0 var(--space-4);
   background: var(--color-light);
@@ -528,7 +544,9 @@ a {
   object-fit: cover;
 }
 
-/* ---- Services ---- */
+/* ==========================================================================
+   Services
+   ========================================================================== */
 .services {
   padding: var(--space-6) 0;
   background: var(--color-white);
@@ -608,7 +626,9 @@ a {
   color: var(--color-primary-dark);
 }
 
-/* ---- Why us ---- */
+/* ==========================================================================
+   Why us
+   ========================================================================== */
 .why-us {
   padding: var(--space-6) 0;
   background: var(--color-light);
@@ -654,7 +674,9 @@ a {
   line-height: 1.6;
 }
 
-/* ---- Work ---- */
+/* ==========================================================================
+   Work
+   ========================================================================== */
 .work {
   padding: var(--space-6) 0;
   background: var(--color-white);
@@ -697,7 +719,9 @@ a {
   font-weight: 600;
 }
 
-/* ---- Process ---- */
+/* ==========================================================================
+   Process
+   ========================================================================== */
 .process {
   padding: var(--space-6) 0;
   background: var(--color-light);
@@ -740,7 +764,9 @@ a {
   line-height: 1.6;
 }
 
-/* ---- Testimonials ---- */
+/* ==========================================================================
+   Testimonials
+   ========================================================================== */
 .testimonials {
   padding: var(--space-6) 0;
   background: var(--color-white);
@@ -774,7 +800,9 @@ a {
   color: var(--color-primary-dark);
 }
 
-/* ---- Areas ---- */
+/* ==========================================================================
+   Areas
+   ========================================================================== */
 .areas {
   padding: var(--space-5) 0;
   background: var(--color-primary);
@@ -789,7 +817,9 @@ a {
   margin: 0 auto;
 }
 
-/* ---- FAQ ---- */
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
 .faq {
   padding: var(--space-6) 0;
   background: var(--color-light);
@@ -844,7 +874,9 @@ a {
   margin-bottom: 0.75rem;
 }
 
-/* ---- CTA ---- */
+/* ==========================================================================
+   CTA
+   ========================================================================== */
 .cta {
   padding: var(--space-6) 0;
   background: var(--color-dark);
@@ -885,7 +917,9 @@ a {
   background: var(--color-accent-dark);
 }
 
-/* ---- Footer ---- */
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 .footer {
   padding: var(--space-5) 0 var(--space-3);
   background: var(--color-dark);
@@ -974,7 +1008,7 @@ a {
 @media (min-width: 640px) {
   .header__container { height: 72px; }
   .hero__container { padding: var(--space-5) 0; }
-  .hero__cta { flex-direction: row; }
+  .hero__cta { flex-direction: row; align-items: center; justify-content: center; }
   .intro__grid { grid-template-columns: 1fr 1fr; }
   .cta__inner { padding: var(--space-6) var(--space-5); }
   .cta__actions { flex-direction: row; justify-content: flex-end; }
@@ -998,13 +1032,17 @@ a {
     gap: 0;
   }
   .header__nav-list a {
+    position: relative;
     padding: 0 var(--space-2);
     font-size: 0.9rem;
     font-weight: 500;
   }
   .header__nav-list a:hover {
     background: transparent;
-    color: var(--color-primary);
+    color: var(--color-accent);
+  }
+  .header__nav-list a:hover::after {
+    width: 70%;
   }
   .header__contact { gap: 1.75rem; }
   .header__contact-item { font-size: 0.9rem; }
