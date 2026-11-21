@@ -22,7 +22,7 @@ README.md
 
 ## Key design decisions (brand-authentic)
 
-- **Brand colors** preserved from the original Jennings Cleaning identity: deep cleaning green `#0E7C4B` (primary), `#0B5A3B` (dark), amber `#F59E0B` (accent).
+- **Brand colors** preserved from the original Jennings Cleaning header identity: charcoal `#111827` (primary), `#030712` (dark), amber `#F59E0B` (accent).
 - **Logo** — original wordmark identity retained as an SVG logo (`assets/logo/jennings-logo.svg`).
 - **Typography** — Inter, a clean professional sans-serif suited to home-service businesses.
 - **Imagery** — industry-specific visuals for hero and service cards. AI-generated conceptual imagery is used where original photography was unavailable; these are **not** presented as real company projects or customer photos.
